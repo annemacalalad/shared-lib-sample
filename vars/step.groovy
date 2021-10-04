@@ -2,7 +2,7 @@ def buildNum(){
   echo "Build image with tag: ${env.BUILD_ID}"
 }
 
-def buildImage(user){
+def buildImage(){
   myapp = docker.build("annemacalalad/ledger-service:${env.BUILD_ID}", "--build-arg VERSION=${env.BUILD_ID} .")
 }
 
