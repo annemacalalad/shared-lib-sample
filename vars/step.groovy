@@ -3,7 +3,7 @@ def buildNum(){
 }
 
 def buildImage(user){
-  myapp = docker.build("${user}/ledger-service:${env.BUILD_ID}", "--build-arg VERSION=${env.BUILD_ID} .")
+  myapp = docker.build("annemacalalad/ledger-service:${env.BUILD_ID}", "--build-arg VERSION=${env.BUILD_ID} .")
 }
 
 def pushImage(){
